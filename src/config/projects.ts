@@ -8,19 +8,19 @@ export const projectsConfig = {
       title: "Project One",
       description: "A brief description of your first project. Explain what it does and what technologies you used.",
       href: "#!",
-      imageUrl: "/assets/images/projects/project1.jpg"
+      imageUrl: "/multiplepage-portfolio/assets/images/projects/project1.jpg"
     },
     {
       title: "Project Two",
       description: "Describe your second project here. Highlight the key features and your role in development.",
       href: "#!",
-      imageUrl: "/assets/images/projects/project2.jpg"
+      imageUrl: "/multiplepage-portfolio/assets/images/projects/project2.jpg"
     },
     {
       title: "Project Three",
       description: "Share details about your third project. What problems did it solve? What was the outcome?",
       href: "#!",
-      imageUrl: "/assets/images/projects/project3.png"
+      imageUrl: "/multiplepage-portfolio/assets/images/projects/project3.png"
     }
   ]
 } as const; 

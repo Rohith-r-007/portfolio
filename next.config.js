@@ -1,10 +1,17 @@
 /** @type {import('next').NextConfig} */
+const isProduction = true;
+const basePath = isProduction ? '/multiplepage-portfolio' : '';
+
 const nextConfig = {
   output: 'export',
+  basePath,
+  trailingSlash: true,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   images: {
     unoptimized: true,
   },
-  trailingSlash: true,
 }
 
 module.exports = nextConfig 

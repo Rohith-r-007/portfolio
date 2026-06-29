@@ -3,7 +3,7 @@ title: "Docker Basics for Developers"
 description: "Learn the fundamentals of Docker and containerization"
 author: "Lisa Wang"
 tags: ["docker", "devops", "containers", "deployment"]
-image: "/assets/images/posts/post1.jpg"
+image: "/multiplepage-portfolio/assets/images/posts/post1.jpg"
 ---
 
 # Docker Basics for Developers

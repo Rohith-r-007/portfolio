@@ -21,20 +21,24 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   }
 
   const postSlug = post.slug.replace('posts/', '');
-  const postHtmlPath = path.join(
-    process.cwd(),
-    'generated',
-    'posts',
-    `${postSlug}.html`
-  );
+  const postHtmlPaths = [
+    path.join(process.cwd(), 'generated', 'posts', `${postSlug}.html`),
+    path.join(process.cwd(), 'src', 'app', 'posts', postSlug, 'page.html'),
+  ];
   let postHtml: string = post.html;
 
-  try {
-    postHtml = await fs.readFile(postHtmlPath, 'utf8');
-  } catch (error) {
-    if (process.env.NODE_ENV !== 'production') {
-      console.warn(`Falling back to config HTML for ${postSlug}:`, error);
+  for (const postHtmlPath of postHtmlPaths) {
+    try {
+      postHtml = await fs.readFile(postHtmlPath, 'utf8');
+      break;
+    } catch {
+      // Try the next generated HTML location before falling back to config HTML.
     }
+  }
+
+  if (postHtml === post.html && process.env.NODE_ENV !== 'production') {
+    const expectedPaths = postHtmlPaths.join(', ');
+    console.warn(`Falling back to config HTML for ${postSlug}. Checked: ${expectedPaths}`);
   }
 
   return (

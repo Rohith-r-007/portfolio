@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { projectsConfig } from '@/config/projects';
+import { assetPath } from '@/lib/paths';
 
 export default function ProjectsContent() {
   return (
@@ -19,7 +20,6 @@ export default function ProjectsContent() {
           <a
             key={index}
             href={project.href}
-            target="_blank"
             className="relative flex flex-col items-stretch duration-300 ease-out p-7 sm:p-3 group h-100 rounded-2xl"
           >
             <span className="absolute inset-0 z-20 block w-full h-full duration-300 ease-out bg-transparent border border-transparent border-dashed group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:border group-hover:border-neutral-300 dark:group-hover:border-neutral-600 group-hover:border-dashed rounded-2xl group-hover:bg-white dark:group-hover:bg-neutral-950"></span>
@@ -27,7 +27,7 @@ export default function ProjectsContent() {
             <span className="relative z-30 block duration-300 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1">
               <span className="block w-full">
                 <Image
-                  src={project.imageUrl}
+                  src={assetPath(project.imageUrl)}
                   alt={project.title}
                   width={800}
                   height={450}

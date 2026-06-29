@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { assetPath } from "@/lib/paths";
 
 interface PostCardProps {
   title: string;
@@ -61,7 +62,7 @@ export default function PostCard({ title, description, date, href, pattern = 'do
             </div>
             <div className="relative w-64 h-48 rounded-xl overflow-hidden flex-shrink-0">
               <Image
-                src={imageUrl}
+                src={assetPath(imageUrl)}
                 alt={title}
                 fill
                 className="object-cover"

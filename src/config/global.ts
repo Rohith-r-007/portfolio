@@ -28,11 +28,11 @@ export const globalConfig = {
   },
   footer: {
     aria: "Footer Navigation",
-    copyright: "© 2025 Your Name. All rights reserved.",
+    copyright: "© 2025 Your Name. All rights reserved ",
     social: {
       twitter: "#",
       github: "#",
-      email: "[EMAIL_ADDRESS]"
+      email: "#!"
     }
   }
 } as const; 

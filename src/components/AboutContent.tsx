@@ -1,5 +1,7 @@
 import Image from "next/image";
+import { Fragment } from "react";
 import { aboutConfig } from "@/config/about";
+import { assetPath } from "@/lib/paths";
 
 export default function AboutContent() {
   return (
@@ -24,7 +26,7 @@ export default function AboutContent() {
           <div className="w-full md:w-1/2 flex justify-end">
             <div className="relative w-[360px] h-[360px]">
               <Image
-                src="/assets/images/about/coder.jpg"
+                src={assetPath("/multiplepage-portfolio/assets/images/about/coder.jpg")}
                 alt="Profile"
                 fill
                 sizes="(max-width: 768px) 100vw, 360px"
@@ -68,18 +70,18 @@ export default function AboutContent() {
                 if (index === array.length - 1) {
                   const [beforeEmail, afterEmail] = part.split('email');
                   return (
-                    <>
+                    <Fragment key={`email-${index}`}>
                       {beforeEmail}
                       <a href={aboutConfig.connect.links.email.url} className="text-indigo-600 underline">{aboutConfig.connect.links.email.text}</a>
                       {afterEmail}
-                    </>
+                    </Fragment>
                   );
                 }
                 return (
-                  <>
+                  <Fragment key={`twitter-${index}`}>
                     {part}
-                    <a href={aboutConfig.connect.links.twitter.url} target="_blank" className="text-indigo-600 underline">{aboutConfig.connect.links.twitter.text}</a>
-                  </>
+                    <a href={aboutConfig.connect.links.twitter.url} className="text-indigo-600 underline">{aboutConfig.connect.links.twitter.text}</a>
+                  </Fragment>
                 );
               })}
             </p>

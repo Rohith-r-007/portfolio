@@ -3,7 +3,7 @@ title: "Designing GraphQL APIs"
 description: "Best practices for designing and implementing GraphQL APIs"
 author: "Tom Wilson"
 tags: ["graphql", "api", "backend", "web development"]
-image: "/assets/images/posts/post3.jpg"
+image: "/multiplepage-portfolio/assets/images/posts/post3.jpg"
 ---
 
 # Designing GraphQL APIs

@@ -3,7 +3,7 @@ title: "Advanced Tailwind CSS Tips and Tricks"
 description: "Learn how to leverage Tailwind CSS for better UI development"
 author: "Sarah Wilson"
 tags: ["css", "tailwind", "frontend", "design"]
-image: "/assets/images/posts/post2.jpg"
+image: "/multiplepage-portfolio/assets/images/posts/post2.jpg"
 ---
 
 # Advanced Tailwind CSS Tips and Tricks

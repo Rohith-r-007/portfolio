@@ -3,7 +3,7 @@ title: "Web Security Best Practices"
 description: "Essential security practices for modern web applications"
 author: "John Security"
 tags: ["security", "web development", "best practices", "authentication"]
-image: "/assets/images/posts/post1.jpg"
+image: "/multiplepage-portfolio/assets/images/posts/post1.jpg"
 ---
 
 # Web Security Best Practices

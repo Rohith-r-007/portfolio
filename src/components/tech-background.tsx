@@ -53,7 +53,7 @@ export default function TechBackground() {
   return (
     <>
       {/* Test overlay layer */}
-      <div 
+      <div
         className="fixed left-[270px] top-1/2 -translate-y-1/2 w-[800px] h-[800px] 
           bg-blue-500/50 hover:bg-green-500/50 transition-colors duration-300
           z-[9999] cursor-pointer"
@@ -66,7 +66,7 @@ export default function TechBackground() {
 
       {/* Original background */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
-        <div 
+        <div
           ref={containerRef}
           className="absolute left-[270px] top-1/2 -translate-y-1/2 w-[800px] h-[800px] 
             bg-red-500/20 cursor-pointer"
@@ -75,7 +75,7 @@ export default function TechBackground() {
           }}
         >
           <img
-            src="/assets/images/tech-background.svg"
+            src="/multiplepage-portfolio/assets/images/tech-background.svg"
             alt="Tech Background"
             className="w-full h-full opacity-50"
           />

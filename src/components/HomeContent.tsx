@@ -3,22 +3,23 @@
 import { useState, useEffect } from 'react';
 import Link from "next/link";
 import { homeConfig } from '@/config/home';
+import { assetPath } from '@/lib/paths';
 
 // Move theme-related logic to this client component
 function ThemeAwareImage() {
   const [mounted, setMounted] = useState(false);
   const [theme, setTheme] = useState('light');
-  const [imageSrc, setImageSrc] = useState('/assets/images/tech-background-light.svg');
+  const [imageSrc, setImageSrc] = useState(assetPath('/multiplepage-portfolio/assets/images/tech-background-light.svg'));
 
   useEffect(() => {
     setMounted(true);
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
       setTheme(savedTheme);
-      setImageSrc(savedTheme === 'light' ? '/assets/images/tech-background-light.svg' : '/assets/images/tech-background.svg');
+      setImageSrc(savedTheme === 'light' ? assetPath('/multiplepage-portfolio/assets/images/tech-background-light.svg') : assetPath('/multiplepage-portfolio/assets/images/tech-background.svg'));
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       setTheme('dark');
-      setImageSrc('/assets/images/tech-background.svg');
+      setImageSrc(assetPath('/multiplepage-portfolio/assets/images/tech-background.svg'));
     }
   }, []);
 
@@ -28,7 +29,7 @@ function ThemeAwareImage() {
         if (mutation.attributeName === 'class') {
           const isDark = document.documentElement.classList.contains('dark');
           setTheme(isDark ? 'dark' : 'light');
-          setImageSrc(isDark ? '/assets/images/tech-background.svg' : '/assets/images/tech-background-light.svg');
+          setImageSrc(isDark ? assetPath('/multiplepage-portfolio/assets/images/tech-background.svg') : assetPath('/multiplepage-portfolio/assets/images/tech-background-light.svg'));
         }
       });
     });
@@ -85,17 +86,17 @@ export default function HomeContent() {
               className="group inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-neutral-900 rounded-lg hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-100 transition-all duration-300 hover:scale-105 cursor-pointer"
             >
               View About
-              <svg 
-                className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" 
-                fill="none" 
-                stroke="currentColor" 
+              <svg
+                className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1"
+                fill="none"
+                stroke="currentColor"
                 viewBox="0 0 24 24"
               >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2.5} 
-                  d="M13 7l5 5m0 0l-5 5m5-5H6" 
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2.5}
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
                 />
               </svg>
             </Link>
@@ -105,17 +106,17 @@ export default function HomeContent() {
               className="group inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-neutral-900 bg-white border border-neutral-300 rounded-lg hover:bg-neutral-50 dark:bg-neutral-900 dark:text-white dark:border-neutral-700 dark:hover:bg-neutral-800 transition-all duration-300 hover:scale-105 cursor-pointer"
             >
               {homeConfig.buttons.readPosts}
-              <svg 
-                className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" 
-                fill="none" 
-                stroke="currentColor" 
+              <svg
+                className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1"
+                fill="none"
+                stroke="currentColor"
                 viewBox="0 0 24 24"
               >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2.5} 
-                  d="M13 7l5 5m0 0l-5 5m5-5H6" 
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2.5}
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
                 />
               </svg>
             </Link>
