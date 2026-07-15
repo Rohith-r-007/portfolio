@@ -102,7 +102,7 @@ export default function HomeContent() {
             </Link>
 
             <Link
-              href="/posts"
+              href="/resume"
               className="group inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-neutral-900 bg-white border border-neutral-300 rounded-lg hover:bg-neutral-50 dark:bg-neutral-900 dark:text-white dark:border-neutral-700 dark:hover:bg-neutral-800 transition-all duration-300 hover:scale-105 cursor-pointer"
             >
               {homeConfig.buttons.readPosts}

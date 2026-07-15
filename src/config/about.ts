@@ -1,66 +1,69 @@
 export const aboutConfig = {
   title: "About Me",
-  description: "This is where you can introduce yourself or your company. Share your story, mission, and values. Explain what makes you unique and why people should be interested in your work. Keep it concise but engaging.",
+
+  description:
+    "I'm Rohith R, a final-year Electronics & Communication Engineering student at VIT pursuing a career in software development. I enjoy building full-stack web applications with the MERN stack, exploring new technologies, and solving real-world problems through practical projects and automation.",
+
   image: "/multiplepage-portfolio/assets/images/about.jpg",
-  stats: [
-    {
-      value: "5+",
-      label: "Years Experience",
-    },
-    {
-      value: "50+",
-      label: "Projects Completed",
-    },
-    {
-      value: "100%",
-      label: "Client Satisfaction",
-    },
-  ],
+
   skills: [
-    "Next.js",
     "React",
-    "TypeScript",
-    "Tailwind CSS",
+    "Next.js",
     "Node.js",
+    "Express.js",
+    "MongoDB",
+    "JavaScript",
+    "Python",
+    "Java",
     "Docker",
+    "Selenium",
     "Git",
-    "AWS"
+    "Tailwind CSS"
   ],
+
   experience: {
     title: "Experience",
+
     items: [
       {
-        period: "2022 - Present",
-        role: "Senior Frontend Developer",
-        company: "Tencent Cloud",
-        description: "Leading frontend development for EdgeOne platform and templates."
+        period: "May 2026 - Present",
+        role: "Software Engineer Intern",
+        company: "Netraga",
+        description:
+          "Working on full-stack MERN applications, REST APIs, authentication, Docker, and cloud deployment."
       },
+
       {
-        period: "2020 - 2022",
-        role: "Frontend Developer",
-        company: "Tencent Cloud",
-        description: "Developed and maintained multiple web applications and tools."
-      },
-      {
-        period: "2018 - 2020",
-        role: "Junior Developer",
-        company: "Tencent Cloud",
-        description: "Worked on various client projects and internal tools."
+        period: "Jun 2025 - Jul 2025",
+        role: "Performance Testing Intern",
+        company: "NStore Retech Pvt. Ltd.",
+        description:
+          "Developed Selenium UI automation scripts, performed regression testing, and worked with Docker and K6."
       }
     ]
   },
+
   connect: {
     title: "Let's Connect",
-    description: "Feel free to reach out if you want to collaborate or just say hi! You can find us on social media or drop us an email.",
+
+    description:
+      "I'm always open to discussing software development, internships, collaborations, or new opportunities. Feel free to reach out!",
+
     links: {
-      twitter: {
-        text: "follow us on twitter",
-        url: "#"
+      linkedin: {
+        text: "LinkedIn",
+        url: "https://www.linkedin.com/in/rohith-r-865302258/"
       },
+
+      github: {
+        text: "GitHub",
+        url: "https://github.com/Rohith-r-007"
+      },
+
       email: {
-        text: "email",
-        url: "#!"
+        text: "rohithravi.0103@gmail.com",
+        url: "mailto:rohithravi.0103@gmail.com"
       }
     }
   }
-}; 
+};

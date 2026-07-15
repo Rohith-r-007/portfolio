@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const isProduction = true;
+const isProduction = false;
 const basePath = isProduction ? '/multiplepage-portfolio' : '';
 
 const nextConfig = {
