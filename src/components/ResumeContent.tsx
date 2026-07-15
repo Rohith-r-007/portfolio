@@ -82,14 +82,6 @@ export default function ResumeContent() {
               Vellore Institute of Technology • Graduating 2027
             </p>
           </div>
-
-          <div className={card}>
-            <h3 className="text-xl font-semibold text-neutral-900 dark:text-white">
-              Bachelor of Science (Online)
-            </h3>
-
-            <p className={`${subText} mt-1`}>IIT Madras</p>
-          </div>
         </div>
       </div>
 
